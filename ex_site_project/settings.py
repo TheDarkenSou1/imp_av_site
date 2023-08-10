@@ -31,7 +31,7 @@ DB_PORT = os.environ.get('DB_PORT')
 DB_USER = os.environ.get('DB_USER')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['imp-site-av-88656b5c24c9.herokuapp.com']
 
