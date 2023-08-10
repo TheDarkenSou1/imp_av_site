@@ -1,0 +1,26 @@
+<section id="gallery" class="gallery section-bg">
+{% load static %}
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>галерея</h2>
+          <p>Погляньте на <span>Наші Фото</span></p>
+        </div>
+
+        <div class="gallery-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+              {% for item in gallery %}
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href={{ item.photo.url }}>
+                   {% if item.photo %}
+                        <img src="{{ item.photo.url }}" alt="{{ item.photo.title }}" class="img-fluid">
+                   {% else %}
+                        <img src="{% static 'assets/img/gallery/gallery-1.jpg' %}" alt="Static Image" class="img-fluid">
+                   {% endif %}
+                </a>
+                </div>
+              {% endfor %}
+          <div class="swiper-pagination"></div>
+        </div>
+        </div>
+      </div>
+</section>
